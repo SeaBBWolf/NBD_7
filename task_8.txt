@@ -1,0 +1,8 @@
+def functionTask8(t: (Int, String, Double)): Unit = {
+  println(t)
+}
+
+functionTask8((1, "Name", 12.2))
+
+
+(1,Name,12.2)

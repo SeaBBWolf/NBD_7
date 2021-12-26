@@ -1,0 +1,39 @@
+val daysOfWeek: List[String] = List("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+
+
+def functionTask1_1(list: List[String]): String = {
+  var result = ""
+  for(day <- list) {
+    result = result + day + ","
+  }
+  result
+}
+
+def functionTask1_2(list: List[String]): String = {
+  var result = ""
+  for(day <- list if day.startsWith("S")) {
+    result = result + day + ","
+  }
+  result
+}
+
+def functionTask1_3(list: List[String]): String = {
+  var i = 0
+  var result = ""
+  while(i<list.length){
+    result = result + list(i) + ","
+    i=i+1
+  }
+  result
+}
+
+println("Task_1_Results")
+println(functionTask1_1(daysOfWeek))
+println(functionTask1_2(daysOfWeek))
+println(functionTask1_3(daysOfWeek))
+
+
+Task_1_Results
+Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday,
+Saturday,Sunday,
+Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday,

@@ -1,0 +1,8 @@
+val myVariable:Option[Int] = None
+val myVariableTwo: Option[Int] = Some(1)
+println("myVariable.getOrElse(10): " + myVariable.getOrElse(10))
+println("myVariableTwo.isEmpty: " + myVariableTwo.isEmpty)
+
+
+myVariable.getOrElse(10): 10
+myVariableTwo.isEmpty: false

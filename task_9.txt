@@ -1,0 +1,15 @@
+val numbersList: List[Int] = List(1, 2, 0, 0, 3, 4, 0, 7, 3, 8, 0)
+
+def functionTask9(list: List[Int], additionalList: List[Int] = List.empty): List[Int] = list match {
+  case Nil => additionalList
+  case 0::tail => functionTask9(tail, additionalList)
+  case firstElement::tail => functionTask9(tail, additionalList:+firstElement)
+}
+
+println("Initial list: " + numbersList)
+println("Result list: "+functionTask9(numbersList))
+
+
+Initial list: List(1, 2, 0, 0, 3, 4, 0, 7, 3, 8, 0)
+Result list: List(1, 2, 3, 4, 7, 3, 8)
+

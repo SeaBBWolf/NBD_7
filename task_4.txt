@@ -1,0 +1,29 @@
+val daysOfWeek: List[String] = List("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+def functionTask4_1(list: List[String]): String = {
+  var result = ""
+  var foldedResult = list.foldLeft(""){(previousValue, currentValue) => previousValue+","+currentValue}
+  foldedResult
+}
+
+def functionTask4_2(list: List[String]): String = {
+  var result = ""
+  var foldedResult = list.foldRight(""){(previousValue, currentValue) => previousValue+","+currentValue}
+  foldedResult
+}
+
+def functionTask4_3(list: List[String]): String = {
+  var filteredList = list.filter(_.startsWith("S"))
+  var foldedResult = filteredList.foldLeft(""){(previousValue, currentValue) => previousValue+","+currentValue}
+  foldedResult
+}
+
+println("Task_4_Results")
+println(functionTask4_1(daysOfWeek))
+println(functionTask4_2(daysOfWeek))
+println(functionTask4_3(daysOfWeek))
+
+
+Task_4_Results
+,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday,
+,Saturday,Sunday

@@ -1,0 +1,7 @@
+val productsMap = Map("jeans" -> 1550.0, "shirt" -> 700.99, "jacket" -> 3993.0)
+val reducedPriceMap = productsMap map {case (key, value) => (key, value - value/10)}
+println("Products' map: "+productsMap)
+println("Reduced price map: "+reducedPriceMap)
+
+Products' map: Map(jeans -> 1550.0, shirt -> 700.99, jacket -> 3993.0)
+Reduced price map: Map(jeans -> 1395.0, shirt -> 630.891, jacket -> 3593.7)

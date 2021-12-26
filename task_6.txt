@@ -1,0 +1,13 @@
+val numbersList: List[Int] = List(1, 2, 3, 4, 7,3, 8)
+
+def functionTask6(list: List[Int]): List[Int] = {
+  val resultList = list.map(x => x+1)
+  resultList
+}
+
+println("Initial list: "+ numbersList)
+println("Updated list: " + functionTask6(numbersList))
+
+
+Initial list: List(1, 2, 3, 4, 7, 3, 8)
+Updated list: List(2, 3, 4, 5, 8, 4, 9)

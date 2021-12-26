@@ -1,0 +1,14 @@
+val numbersList: List[Double] = List(-12.0, -5.8, -4, -5.0, 46, 235, 10, 2, 12, 3.4, 15)
+
+def functionTask7(list: List[Double]): List[Double] = {
+  val filteredList = list.filter(x =>(x>=(-5.0) && x<= 12.0))
+  val absoluteValues = filteredList.map(x => (x).abs)
+  absoluteValues
+}
+
+println("Initial list: "+numbersList)
+println("Result list: "+ functionTask7(numbersList))
+
+
+Initial list: List(-12.0, -5.8, -4.0, -5.0, 46.0, 235.0, 10.0, 2.0, 12.0, 3.4, 15.0)
+Result list: List(4.0, 5.0, 10.0, 2.0, 12.0, 3.4)

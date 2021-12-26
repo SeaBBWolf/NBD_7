@@ -1,0 +1,18 @@
+import scala.annotation.tailrec
+val daysOfWeek: List[String] = List("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+def functionTask3(list: List[String]) : String = {
+    @tailrec
+    def itter(list: List[String], result: String) : String = {
+      if(list.isEmpty)
+        result
+      else 
+        itter(list.tail, result + "," + list.head)
+    }    
+  itter(list.tail, list.head)
+}
+
+println("Task_3_Results")
+println(functionTask3(daysOfWeek))
+
+Task_3_Results
+Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday

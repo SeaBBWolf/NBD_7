@@ -1,0 +1,22 @@
+val daysOfWeek: List[String] = List("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+def functionTask2_1(list: List[String]): String = {
+  if (list.isEmpty)
+  ""
+  else
+  list.head +","+functionTask2_1(list.tail)
+}
+
+def functionTask2_2(list: List[String]): String = {
+  if (list.isEmpty)
+  ""
+  else
+  functionTask2_2(list.tail)  + list.head+","
+}
+
+println("Task_2_Results")
+println(functionTask2_1(daysOfWeek))
+println(functionTask2_2(daysOfWeek))
+
+Task_2_Results
+Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday,
+Sunday,Saturday,Friday,Thursday,Wednesday,Tuesday,Monday,
